@@ -4,8 +4,11 @@
 		"description": "",
 		"scripts": {
 			"prestart": "node buildScripts/startMessage.js",
-			"start": "node buildScripts/srcServer.js"
-		},
+			"start": "node buildScripts/srcServer.js",
+			"security-check": "nsp check",
+			"localtunnel": "lt --port 3000",
+			"share": "npm-run-all --parallel start localtunnel"
+		}, 
 		"author": "Clayseph",
 		"license": "MIT",
 		"dependencies": {
